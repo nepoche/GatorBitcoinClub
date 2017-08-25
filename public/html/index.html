@@ -4,19 +4,26 @@
   <title>UF Bitcoin Club</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://use.fontawesome.com/b9b96fcb5a.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
 </head>
 <body>
-  <div ng-controller="MainController">
-    <header>
-      <nav class="navbar navbar-default navbar-fixed-top">
-        <a class="navbar-brand" href="#home" onclick="$('#home').animatescroll({scrollSpeed:1000,easing:'easeInOutBack'});">
-          <div class='ufcoin'>
-            <img src='/images/GatorCoin2.png' alt='UF Bitcoin Club'>
-          </div>
-        </a>
-        <div class='container'>
+  <header>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <a class="navbar-brand" href="#home" onclick="$('#home').animatescroll({scrollSpeed:1000,easing:'easeInOutBack'});">
+        <div class="ufcoin" style="margin-top: -10px;">
+          <img src="/images/GBC_thumbnail.png" alt="UF Bitcoin Club" height="40px" width="40px">
+        </div>
+      </a>
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+          </button>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
           <ul class="nav nav-pills">
             <li role="presentation"><a href="#about" onclick="$('#about').animatescroll({scrollSpeed:1000,easing:'easeInOutBack'});">About</a></li>
             <li role="presentation"><a href="#leadership" onclick="$('#leadership').animatescroll({scrollSpeed:1000,easing:'easeInOutBack'});">Leadership</a></li>
@@ -24,182 +31,111 @@
             <li role="presentation"><a href="#contact" onclick="$('#contact').animatescroll({scrollSpeed:1000,easing:'easeInOutBack'});">Contact</a></li>
           </ul>
         </div>
-      </nav>
-    </header>
-<div class='section' id='home'>
-  <div class='ufbitcoin bounce'>
-    <img src='/images/GatorCoin2.png' alt='UF Bitcoin Club'>
+      </div>
+    </nav>
+  </header>
+  <div class="section container" id="home">
+    <div class="ufbitcoin">
+      <img class="img-responsive center-block" id="gbc-logo" src='/images/GBC_brand_big_trimmed.png' alt='UF Bitcoin Club'>
+    </div>
+
+    <div class="text-center">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSccHBYZBbOV_OInuuebe5oiUlt0f0db7DS4ftzfF4Aqza_KBQ/viewform" class="btn btn-lg gbc-button">Sign Up</a>
+    </div>
   </div>
 
-  <h1 class='text-center title'>Bitcoin Club</h1>
-
-  <div class="col-md-12 text-center">
-    <button type="button" class="btn btn-info btn-lg" name="button" data-toggle="modal" data-target="#myModal">Sign Up</button>
-  </div>
-
-    <!-- Signup Modal -->
-  <div id="myModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <!-- Signup Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title text-center">Sign Up for our Newsletter</h4>
+  <div id="about" class="section">
+    <div class="container">
+      <div class="row">
+        <div class="text-center">
+          <h2 class="text-center">Our Mission</h2>
+          <h3 style="margin-bottom: 30px;">Students come together to build a future in the emerging bitcoin and blockchain industries.</h3>
         </div>
-        <div class="modal-body text-center">
-          <div class="form-group row">
-            <div class="col-md-12">
-              <label for="Full Name">Full Name: </label>
-              <input type="text" ng-model="newMember.name" name="Full Name" placeholder="Satoshi Nakamoto">
-            </div>
-          </div>
-        <div class="form-group row">
-          <div class="col-md-12">
-            <label for="Email Address" class="col-2 col-form-label">Email: </label>
-            <input type="email" ng-model="newMember.email" name="Email Address" placeholder="satoshin21@ufl.edu">
-          </div>
+      </div>
+      <div id='aboutIcons'>
+        <div class="aboutpics text-center">
+          <img class="img-responsive" src="images/Learn_neg.png" alt="learn">
+          <p style="font-size: 20px;">
+            Learn about bitcoin.
+          </p>
         </div>
-          <div class="modal-footer">
-            <button ng-click="createMember(newMember)" type="button" class="btn btn-success" data-dismiss="modal">Submit</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
+        <div class="aboutpics text-center">
+          <img class="img-responsive" src="images/Educate_neg.png" alt="understand">
+          <p style="font-size: 20px;">
+            Understand the blockchain technology.
+          </p>
+        </div>
+        <div class="aboutpics text-center">
+          <img class="img-responsive" src="images/Jobs_neg.png" alt="get jobs">
+          <p style="font-size: 20px;">
+            Help students get jobs in the industry.
+          </p>
         </div>
       </div>
     </div>
   </div>
-</div>
 
-    <div id='about'>
-      <section class='section'>
-          <div class="row">
-            <div class="text-center">
-              <h2 class="text-center hideme">Our Mission</h2>
-              <h3 class="hideme" style='padding: 0px 50px 0px 50px'>Students come together to build a future in the emerging bitcoin and blockchain industries.</h3>
-            </div>
-          </div>
-          <div class="col-lg-12" id='aboutIcons'>
-              <div class="col-lg-4 aboutpics hideme"><img class="img-responsive" src="images/Learn.png" alt="">
-                <p style="margin-top: 30px;">
-                  Learn about bitcoin.
-                </p>
-              </div>
-              <div class="col-lg-4 aboutpics hideme"><img class="img-responsive" src="images/Educate.png" alt="">
-                <p style="margin-top: 30px;">
-                  Understand the blockchain technology.
-                </p>
-              </div>
-              <div class="col-lg-4 aboutpics hideme"><img class="img-responsive" src="images/Jobs.png" alt="">
-                <p style="margin-top: 30px;">
-                  Help students get jobs in the industry.
-                </p>
-              </div>
-            </div>
-      </section>
+  <div id="leadership" class="section container">
+    <h2 class="text-center">Our Leaders</h2>
+    <div class="row">
+      <div class="col-sm-4 text-center">
+        <img class="img-circle headshot" src="images/Yoel-headshot-close.png">
+        <h6 style="font-size: 1em;">Yoel Lapscher:<br> President</h6>
+      </div>
+      <div class="col-sm-4 text-center">
+        <img class="img-circle headshot" src="images/Antonio-headshot-close.png">
+        <h6 style="font-size: 1em;">António Gomes:<br> Vice-President</h6>
+      </div>
+      <div class="col-sm-4 text-center">
+        <img class="img-circle headshot" src="images/Nathan-headshot-close.png">
+        <h6 style="font-size: 1em;">Nathan Barnavon:<br> Treasurer</h6>
+      </div>
+    </div>
+    <h2 class="text-center">Our Advisors</h2>
+    <div class="row">
+      <div class="col-sm-4 col-md-offset-2 text-center">
+        <img class="img-circle headshot" src="images/DM-headshot-close.png">
+        <h6 style="font-size: 1em;">DM Suja: <br> Former Co-founder</h6>
+      </div>
+      <div class="col-sm-4 text-center">
+        <img class="img-circle headshot" src="images/Nemo-headshot-close.png">
+        <h6 style="font-size: 1em;">Richard Newman:<br> Faculty Advisor</h6>
+      </div>
     </div>
 
-        <div id='leadership'>
-          <section class='section leadSection'>
-            <h2 class='text-center'>Our Leaders</h2>
-              <div class="lead">
 
-
-
-                <div class='hovereffect'>
-                  <img class="img-responsive headshot" src="images/Headshot (1 of 8).jpg" alt="">
-                  <div class='overlay'>
-                    <!-- <h3>title</h3> -->
-                  </div>
-                </div>
-
-                <div>
-                  <img class="img-responsive headshot" src="images/Headshot (3 of 8).jpg" alt="">
-                  <div class='overlay'>
-                    <!-- <h3>title</h3> -->
-                    <!-- <span class='text-content'><span>title</span></span> -->
-                  </div>
-                </div>
-
-                <div>
-                  <img class="img-responsive headshot" src="images/Headshot (4 of 8).jpg" alt="">
-                  <div class='overlay'>
-                    <!-- <h3>title</h3> -->
-                  </div>
-                </div>
-
-                <div class='hovereffect'>
-                  <img class="img-responsive headshot" src="images/Headshot (5 of 8).jpg" alt="">
-                  <div class='overlay'>
-                    <!-- <h3>title</h3> -->
-                  </div>
-                </div>
-
-                <div class='hovereffect'>
-                  <img class="img-responsive headshot" src="images/Headshot (6 of 8).jpg" alt="">
-                  <div class='overlay'>
-                    <!-- <h3>title</h3> -->
-                  </div>
-                </div>
-
-                <div class='hovereffect'>
-                  <img class="img-responsive headshot" src="images/Headshot (8 of 8).jpg" alt="">
-                  <div class='overlay'>
-                    <!-- <h3>title</h3> -->
-                  </div>
-                </div>
-
-
-
-              </div>
-
-
-
-              <div class='container-fluid'>
-                <div class='row sponsors'>
-                  <img class=" col-lg-2 col-md-2 col-sm-2 col-lg-offset-3 col-md-offset-3 col-sm-offset-3 sponsorLogo" src="images/ben.png" alt=""> <!-- Add blockchainedu.org -->
-                  <img class=" col-lg-2 col-md-2 col-sm-2 col-lg-offset-2 col-md-offset-2 col-sm-offset-2 sponsorLogo" src="images/mlg.png" alt=""> <!-- Add http://mlgblockchain.com/ -->
-                </div>
-              </div>
-          </section>
-        </div>
-
-        <div id='events'>
-          <section class='section text-center'>
-            <h2 class='text-center' style="padding-top: -50px;">Events</h2>
-            <iframe src="https://calendar.google.com/calendar/embed?title=UF%20Bitcoin%20Club%20Events&amp;showTitle=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=ufbitcoinclub%40gmail.com&amp;color=%231B887A&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=America%2FNew_York" style="border: 0px solid black; border-radius: 4px; margin-top:20px;" width="900" height="450" frameborder="0" scrolling="no"></iframe>
-        </div>
-        <div id='contact' >
-          <section class='section' id='land'>
-            <h2 class='text-center'>Contact Us</h2>
-
-            <div class="row">
-              <div class="col-md-12" style="padding-top: 10px; margin-top: 20px">
-                <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline" style="list-style-type: none;">
-                  <li><a class="btn" href="https://www.facebook.com/groups/bitcoinclubuf/"><i class="fa fa-facebook"></i></a></li>
-                  <li><a class="btn" href="https://twitter.com/ufbitcoinclub1"><i class="fa fa-twitter"></i></a></li>
-                  <li><a class="btn" href="https://www.linkedin.com/company-beta/16181621/"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a class="btn" href="http://github.com/"><i class="fa fa-github"></i></a></li>
-                  <li><a class="btn" href="http://slack.com/"><i class="fa fa-slack"></i></a></li>
-                </ul>
-              </div>
-            </div>
-            <h3 class='copy'>Want to help us? Get involved behind the scenes. </h3>
-
-              <div class='container-fluid contactBtn'>
-                <button type="button" class="btn btn-info btn-lg btn-ctn"  name="button">Student</button>
-                <button type="button" class="btn btn-info btn-lg btn-ctn"  name="button">Advisor</button>
-                <button type="button" class="btn btn-info btn-lg btn-ctn"  name="button">Partner</button>
-                <button type="button" class="btn btn-info btn-lg btn-ctn"  name="button">Meet the Team</button>
-              </div>
-
-
-          </section>
-          <footer class='footer'>
-            <a href='https://github.com/aschwizzy710/ufbitcoinclub' class='github'>Made with love Aaron &amp; Alec</a>
-          </footer>
-
-
-        </div>
+    <div class="container row" style="margin-top: 30px;">
+      <div class="col-4">
+        <h2 class="text-center">Our Partners</h2>
+        <img class="ben-logo center-block" src="images/ben_neg.png" alt="Blockchain education network logo">
+      </div>
+    </div>
   </div>
+
+    <div id='events'>
+      <section class='section text-center'>
+        <h2 class='text-center'>Events</h2>
+        <iframe src="https://calendar.google.com/calendar/embed?title=UF%20Bitcoin%20Club%20Events&amp;showTitle=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=ufbitcoinclub%40gmail.com&amp;color=%231B887A&amp;src=en.usa%23holiday%40group.v.calendar.google.com&amp;color=%23125A12&amp;ctz=America%2FNew_York" style="border: 0px solid black; border-radius: 4px; margin-top:20px;" width="900" height="450" frameborder="0" scrolling="no"></iframe>
+    </div>
+    <div id="contact">
+      <section class="container section" id="land" style="margin-bottom: 60px;">
+        <h2 class="text-center">Contact Us</h2>
+
+        <div class="row">
+          <div class="col-md-12" style="padding-top: 10px; margin-top: 20px">
+            <ul class="social-icons icon-circle icon-zoom list-unstyled list-inline" style="list-style-type: none;">
+              <li><a class="btn" href="mailto:ufbitcoinclub@gmail.com"><i class="fa fa-envelope"></i></a></li>
+              <li><a class="btn" href="https://www.facebook.com/groups/gatorbitcoinclub/"><i class="fa fa-facebook"></i></a></li>
+              <li><a class="btn" href="https://www.linkedin.com/company-beta/16181621/"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="js/animatescroll.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
@@ -207,7 +143,7 @@
   <script src="js/app.js"></script>
   <script src="js/controllers/main.controller.js"></script>
   <script src="js/services/member.service.js"></script>
-  </body>
+</body>
 </html>
 <!-- Contact GitHub API Training Shop Blog About
 © 2017 GitHub, Inc. Terms Privacy Security Status Help -->

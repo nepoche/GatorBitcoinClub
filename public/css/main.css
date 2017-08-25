@@ -1,63 +1,19 @@
-
-/*@font-face {
-  font-family: 'metropolis';
-  src: url("./public/fonts/Metropolis-Medium.otf");
-}*/
-
-#land {
-  background-color:#0D1017;
-}
-
-#about{
-  background-color: #121521;
-}
-
-#leadership{
-  background-color: #1D2233;
-}
-
-#events{
-  background-color: #2B324A;
-}
-
-#contact {
-  background-color: #BCEDF6;
-}
-
-h1 {
-  font-family: Aldrich;
-}
-
-#home{
-background-image: url('/images/background.png');
-background-size: 100vw;
-}
-
-.ufbitcoin {
-  display: flex;
-  justify-content: center;
-  margin-top: 110px;
-}
-
 .navbar {
-  background-color: transparent !important;
+  background-color: white !important;
   border: 0px !important;
-  background-color: transparent !important;
-  border:0 !important;
+}
+
+.navbar-brand {
+  background-color: white;
 }
 
 .nav-pills {
-      margin-top: 7px;
-}
-
-p{
-  padding: 0px
+  margin-top: 7px;
 }
 
 li a{
   font-family: Aldrich;
   font-size: 18px;
-  color: white;
 }
 
 li a:hover{
@@ -65,111 +21,25 @@ li a:hover{
   color:#FFA90A !important;
 }
 
-.ufcoin img{
-  max-width: 40px;
-  max-height: 40px;
+.gbc-button {
+  background-color: #009900;
+  color: white;
+  width: 200px;
 }
 
-.ufbitcoin {
-  display: flex;
-  justify-content: center;
-  padding-top:120px;
-  margin-top: 0px;
-}
-
-.modal-content {
-  color: black;
-}
-
-.title {
-  color:#fff;
-  font-size: 90px;
-  font-family: Aldrich;
-}
-
-h2.text-center {
-  font:100px;
-  margin: 0px !important;
-  padding-top: 90px;
-  color:#fff;
-  font-size: 50px;
-}
-
-a.github{
-  font:10px;
-  margin: 0px !important;
-  padding-top: 0px;
-  color:#fff;
-  font-size: 10px;
-}
-
-
-.copy {
-  padding: 20px 0px;
-  text-align:center;
-}
-
-.btn-info {
-  margin-top: 60px !important;
-  background-color: orange !important;
-  border-color: #B56C0C !important;
-  width:200px;
-
-}
-
-.btn-info:hover{
-  background-color: #D18B09 !important;
-  color: #E7E7E7 !important;
-}
-
-.btn-ctn{
-  margin-top: 50px !important;
-}
-
-.signup {
-  height:600px;
-  font-family: Aldrich;
-}
-
-.input-group{
-  margin-top: 50px;
+.gbc-button:hover {
+  background-color: #00b300;
 }
 
 .section {
-  padding-top: 0px;
-  height:100vh;
+  padding-top: 62px;
   font-family: Aldrich;
-  color: white;
-}
-
-.leadSection{
-  height: 100vm;
-}
-
-.footer{
-  background-color: #0D1017;
-  text-align: center;
-}
-
-.container {
-  padding-right: 0px !important;
-  padding-left: 0px !important;
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-}
-.row{
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-}
-
-.nav li a {
-  padding-top: 15px !important;
-  padding-bottom: 15px !important;
+  color: black;
 }
 
 #aboutIcons{
   display:flex;
-  justify-content: center;
+  justify-content: space-around;
   margin-top:50px;
 }
 
@@ -177,47 +47,35 @@ a.github{
   text-align: center;
   max-height: 180px;
   max-width:200px;
-  margin-left: 75px;
-  margin-right: 75px;
 }
 
-.lead {
-  margin-top: 20px;
-  margin-bottom: 0px !important;
-  max-width:100% ;
-  display:flex;
-  justify-content: space-around;
+#leadership {
+  margin-top: 80px;
 }
 
 a:hover {
   text-decoration: none !important;
-  color:white !important;
+  color:black !important;
 }
 
-.row.lead{
-  margin-top: 40px;
+.ben-logo{
+  max-height: 225px;
+  max-width: 225px;
+  margin-top: 20px;
 }
 
-.sponsors{
-    height:125px;
-    display:flex;
-    align-items:center;
+.headshot {
+    width:  200px;
+    height: 200px;
 }
 
-.sponsorLogo{
-  max-width: 100%;
-}
-
-.contactBtn {
+.contact-buttons {
   display: flex;
   justify-content: space-around;
+  margin-top: 30px;
 }
 
-.image-responsive .headshot{
-  height: 90%;
-}
-
-/*beginning of hoverover effect for leadership images*/
+/*beginning of hoverover effect for leadership images
 
 /*.hovereffect {
 span.text-content{
@@ -243,7 +101,7 @@ span.text-content span {
   text-align: center;
   vertical-align: middle;
 }
-
+*/
 /*
 .hovereffect {
 >>>>>>> c04f831656e74fd82a9c17ee6c7a237f1baf43af
@@ -310,23 +168,9 @@ filter:alpha(opacity=100);
 transform:translatey(0);
 }*/
 
-end of hover over effect
-
 /*.hideme {
     opacity:0;
 }*/
-
-.bounce {
-  position: relative;
-  text-align: center;
-  left:50%;
-  bottom:0;
-  background:;
-  left:50%;
-    margin-left:-25px;
-    width:50px;
-  -webkit-animation:bounce 1s infinite;
-}
 
 @-webkit-keyframes bounce {
   0%       { bottom:5px; }
@@ -401,37 +245,9 @@ end of hover over effect
 	transform: scale(1.1) rotate(360deg);
 }
 
-.social-icons .fa-adn{background-color:#504e54;}
-.social-icons .fa-apple{background-color:#aeb5c5;}
-.social-icons .fa-android{background-color:#A5C63B;}
-.social-icons .fa-bitbucket,.social-icons .fa-bitbucket-square{background-color:#003366;}
 .social-icons .fa-bitcoin,.social-icons .fa-btc{background-color:#F7931A;}
-.social-icons .fa-css3{background-color:#1572B7;}
-.social-icons .fa-dribbble{background-color:#F46899;}
-.social-icons .fa-dropbox{background-color:#018BD3;}
+.social-icons .fa-envelope{background-color: #5cd65c;}
 .social-icons .fa-facebook,.social-icons .fa-facebook-square{background-color:#3C599F;}
-.social-icons .fa-flickr{background-color:#FF0084;}
-.social-icons .fa-foursquare{background-color:#0086BE;}
 .social-icons .fa-github,.social-icons .fa-github-alt,.social-icons .fa-github-square{background-color:#CC2127;}
 .social-icons .fa-google-plus,.social-icons .fa-google-plus-square{background-color:#CF3D2E;}
-.social-icons .fa-html5{background-color:#E54D26;}
-.social-icons .fa-instagram{background-color:#A1755C;}
 .social-icons .fa-linkedin,.social-icons .fa-linkedin-square{background-color:#0085AE;}
-.social-icons .fa-linux{background-color:#FBC002;color:#333;}
-.social-icons .fa-maxcdn{background-color:#F6AE1C;}
-.social-icons .fa-pagelines{background-color:#241E20;color:#3984EA;}
-.social-icons .fa-pinterest,.social-icons .fa-pinterest-square{background-color:#CC2127;}
-.social-icons .fa-renren{background-color:#025DAC;}
-.social-icons .fa-skype{background-color:#01AEF2;}
-.social-icons .fa-slack{background-color: #504e54}
-.social-icons .fa-stack-exchange{background-color:#245590;}
-.social-icons .fa-stack-overflow{background-color:#FF7300;}
-.social-icons .fa-trello{background-color:#265A7F;}
-.social-icons .fa-tumblr,.social-icons .fa-tumblr-square{background-color:#314E6C;}
-.social-icons .fa-twitter,.social-icons .fa-twitter-square{background-color:#32CCFE;}
-.social-icons .fa-vimeo-square{background-color:#229ACC;}
-.social-icons .fa-vk{background-color:#375474;}
-.social-icons .fa-weibo{background-color:#D72B2B;}
-.social-icons .fa-windows{background-color:#12B6F3;}
-.social-icons .fa-xing,.social-icons .fa-xing-square{background-color:#00555C;}
-.social-icons .fa-youtube,.social-icons .fa-youtube-play,.social-icons .fa-youtube-square{background-color:#C52F30;}

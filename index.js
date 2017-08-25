@@ -5,7 +5,7 @@ var mongoose = require('mongoose');
 var mongoURI = process.env.MONGOURI || require('./config.js').mongoURI;
 mongoose.connect(mongoURI);
 
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 80;
 server.use(express.static(__dirname + '/public'));
 
 server.get('/', function(request, response){
